@@ -142,7 +142,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const updateProfile = React.useCallback(
     async (patch: Partial<Profile>) => {
-      if (!session?.user) throw new Error("No hay sesion activa");
+      if (!session?.user) throw new Error("No hay sesión activa");
       const updated = await updateOwnProfile(session.user.id, patch);
       setProfile(updated);
       return updated;

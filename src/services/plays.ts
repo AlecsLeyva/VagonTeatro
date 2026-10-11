@@ -434,6 +434,6 @@ export function isActivePlaysLimitError(error: {
   return (
     text.includes("obras activas") ||
     text.includes("active plays") ||
-    text.includes("limite de obras")
+    text.includes("límite de obras")
   );
 }

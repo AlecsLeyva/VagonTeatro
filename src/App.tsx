@@ -26,8 +26,8 @@ export default function App() {
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
         </Route>
 
-        {/* Recuperacion: el enlace del correo crea una sesion de tipo recovery,
-            por eso esta fuera de PublicOnlyRoute. */}
+        {/* Recuperación: el enlace del correo crea una sesión de tipo recovery,
+            por eso está fuera de PublicOnlyRoute. */}
         <Route path="/reset-password" element={<ResetPasswordPage />} />
 
         {/* Authenticated */}

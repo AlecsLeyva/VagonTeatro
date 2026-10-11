@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { extractWeekDays, hasScheduleConflict } from "./schedule";
 
 describe("extractWeekDays", () => {
-  it("detecta dias escritos con nombre", () => {
+  it("detecta días escritos con nombre", () => {
     expect(extractWeekDays("Lunes y miércoles 07:00-09:00")).toEqual([
       "lun",
       "mie",
@@ -26,19 +26,19 @@ describe("extractWeekDays", () => {
     expect(extractWeekDays("07:00-13:00")).toEqual([]);
   });
 
-  it("devuelve vacio sin texto", () => {
+  it("devuelve vacío sin texto", () => {
     expect(extractWeekDays(null)).toEqual([]);
   });
 });
 
 describe("hasScheduleConflict", () => {
-  it("detecta choque entre ensayo y clase el mismo dia", () => {
+  it("detecta choque entre ensayo y clase el mismo día", () => {
     expect(hasScheduleConflict("Lun, Mié 10:00-12:00", "miércoles 07:00-09:00")).toBe(
       true,
     );
   });
 
-  it("no marca choque cuando los dias no coinciden", () => {
+  it("no marca choque cuando los días no coinciden", () => {
     expect(hasScheduleConflict("Lun, Mar", "miércoles y jueves")).toBe(false);
   });
 
@@ -46,7 +46,7 @@ describe("hasScheduleConflict", () => {
     expect(hasScheduleConflict("Lunes", null)).toBe(false);
   });
 
-  it("no marca choque sin dias de ensayo", () => {
+  it("no marca choque sin días de ensayo", () => {
     expect(hasScheduleConflict(null, "lunes 08:00-10:00")).toBe(false);
   });
 });

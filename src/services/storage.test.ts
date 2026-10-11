@@ -9,7 +9,7 @@ const PUBLIC_URL =
   "https://example.supabase.co/storage/v1/object/public/scripts-guiones/play-1/1700000000000-hamlet.pdf";
 
 describe("pathFromPublicUrl", () => {
-  it("extrae la ruta de una URL publica del bucket", () => {
+  it("extrae la ruta de una URL pública del bucket", () => {
     expect(pathFromPublicUrl(PUBLIC_URL)).toBe(
       "play-1/1700000000000-hamlet.pdf",
     );
@@ -28,7 +28,7 @@ describe("objectPathFromStored", () => {
     );
   });
 
-  it("convierte URL publicas antiguas a rutas", () => {
+  it("convierte URL públicas antiguas a rutas", () => {
     expect(objectPathFromStored(PUBLIC_URL)).toBe(
       "play-1/1700000000000-hamlet.pdf",
     );
@@ -36,7 +36,7 @@ describe("objectPathFromStored", () => {
 });
 
 describe("scriptFileName", () => {
-  it("recorta el prefijo numerico y la carpeta", () => {
+  it("recorta el prefijo numérico y la carpeta", () => {
     expect(scriptFileName("play-1/1700000000000-hamlet.pdf")).toBe(
       "hamlet.pdf",
     );

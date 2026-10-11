@@ -248,7 +248,7 @@ begin
       and id <> coalesce(new.id, '00000000-0000-0000-0000-000000000000'::uuid);
 
     if active_count >= max_active then
-      raise exception 'Limite de obras activas alcanzado: un director no puede tener mas de % obras activas simultaneas.', max_active
+      raise exception 'Límite de obras activas alcanzado: un director no puede tener más de % obras activas simultáneas.', max_active
         using errcode = 'check_violation';
     end if;
   end if;

@@ -10,8 +10,8 @@ interface ErrorBoundaryState {
 }
 
 /**
- * Captura los errores de renderizado y evita que toda la aplicacion quede en
- * blanco. Muestra un mensaje y un boton para recargar.
+ * Captura los errores de renderizado y evita que toda la aplicación quede en
+ * blanco. Muestra un mensaje y un botón para recargar.
  */
 export class ErrorBoundary extends React.Component<
   ErrorBoundaryProps,
@@ -39,17 +39,17 @@ export class ErrorBoundary extends React.Component<
       <div className="flex min-h-screen items-center justify-center bg-background p-6">
         <div className="w-full max-w-md space-y-4 rounded-xl border border-border bg-card p-6 text-center shadow-sm">
           <h1 className="text-lg font-semibold text-foreground">
-            Algo salio mal
+            Algo salió mal
           </h1>
           <p className="text-sm text-muted-foreground">
-            Ocurrio un error inesperado en la aplicacion. Intenta recargar la
-            pagina; si el problema persiste, contacta al administrador.
+            Ocurrió un error inesperado en la aplicación. Intenta recargar la
+            página; si el problema persiste, contacta al administrador.
           </p>
           <pre className="max-h-40 overflow-auto rounded-lg bg-muted p-3 text-left text-xs text-muted-foreground">
             {error.message}
           </pre>
           <Button onClick={this.handleReload} className="w-full">
-            Recargar pagina
+            Recargar página
           </Button>
         </div>
       </div>

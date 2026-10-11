@@ -114,7 +114,7 @@ export function AppLayout() {
               size="icon"
               className="lg:hidden hover:bg-accent/80"
               onClick={() => setMobileOpen((open) => !open)}
-              aria-label="Abrir menu"
+              aria-label="Abrir menú"
             >
               {mobileOpen ? (
                 <X className="h-5 w-5" />

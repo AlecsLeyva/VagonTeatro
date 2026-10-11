@@ -507,7 +507,7 @@ export function AdminActorsPage() {
                   <option value="todas">Todas las cargas</option>
                   <option value="sin-obra">Sin obra asignada</option>
                   <option value="hasta-2">Hasta 2 obras</option>
-                  <option value="3-mas">3 obras o mas</option>
+                  <option value="3-mas">3 obras o más</option>
                 </Select>
               </div>
             </CardHeader>
